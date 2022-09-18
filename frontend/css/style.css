@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    /*margin y padding para ampliarle espacio al body*/
+    background: linear-gradient(180deg, #0e3b56 0%, #0993ab 100%);
+    /*background-size: cover para ajustar la imagen en el fondo*/
+    background-size: cover;
+    /*Cambiamos el tipo de letra y la altura de la página la
+    ampliamos al 100% de la pantalla donde se abra*/
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.login {
+    width: 320px;
+    height: 420px;
+    background: #000;
+    /*Creamos un cuadro negro y el color de abajo es para que su contenido sea blanco*/
+    color: #fff;
+    /*Le indicamos la mitad de arriba y la mitad de la izquierda y eso nos da el centro*/
+    top: 50%;
+    left: 50%;
+    /*Coon las propiedades de position podemos modificar el flujom el flujo es como se muestran las cosas una encima de otra
+    
+    relative -> Le decimos que coja la posición dependiendo su posición inicial, nos permite jugar con su posición.
+
+    absolute -> Se salta el flujo y queda por encima.
+
+    se pueden combinar absolute y relative, dejando así que no se subirá el absolute por encima de todo sino por encima del relative y dejandolo encerrado ahí y pudiendo moverlo por todo ese límite, sería por ejemplo que el padre sea relative y el hijo absolute, el absolute esta encerrado en ese relative
+
+    */
+    position:absolute;
+    /*Con transform modificamos el elemento sin cambiar su flujo, en este caso lo movemos transladandolo en el eje x y y, siendo que si muevo para atras -50% me queda en el centro en x y -50% lo subo a la mitad(si estaba abajo significa que lo devolvimos) en y , dejandolo en el centro
+    
+    recordemos que en esto las cosas van invertidas si le agrego lo alejo y si le resto lo acerco.*/
+    transform: translate(-50%, -50%);
+    /*Ocurre que al crear la caja, esta crece de acuerdo al padding y al border, pues se suma a su dimensión, no queremos eso, sino que su interior solo sea los valores especificados arriba, debido a esto box-sizing con border-box calcula el tamaño restando las anteriores cosas, dejandonos nuestro calculo exacto*/
+    box-sizing: border-box;
+    /*Con padding hacemos que tenga una distancia interior respecto a la caja dejando los elementos mas centrados y mejor vistos
+    70px hacia arriba y abajo y 38 px hacia los lados*/
+    padding: 70px 38px;
+}
+
+.login .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /*Le cambiamos sus dimensiones, lo hacemos un circulo con el radio al 50%, luego con absolute lo llevamos encima de todo y luego lo subimos 50px para que quede arriba de la caja sin embargo aun esta centrado así que falta correrlo de la mitad hacia la derecha 50px, como sabemos que si ponemos left lo corre de la izquierda hacia la derecha, pues debemos usar calcular para calular 50% y que le agregue 50 px extras, sin embargo el objetivo es centrarlo arriba de la caja y debemos es restarle los 50px con calcularquitele 50 px al 50% */
+
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.login h1 {
+    margin: 0px;
+    /*Cuando hay tres es arriba, lados y abajo*/
+    padding: 0 0 20px;
+    /*text-align para centar el texto*/
+    text-align: center;
+    font-size: 22px;
+}
+
+.login label {
+    /*
+    ESTA EXPLICACIÓN ANTES ERA PARA H1
+    Queremos quitarle espacios al titulo pues entonces ponemos margin y paddin con 0*/
+    margin: 0px;
+    padding: 0px;
+    /*Indicamos el peso o magnitud de la fuente poniendola negrilla*/
+    font-weight: bold;
+    /*Explicación propiedad display en css
+    como lo vamos a mostrar en el flujo básicamente, por naturaleza va uno debajo del otro los elementos, eso natural se llama display: block , haciendo que de ancho ocupe el 100% y solo dejando la alternativa de ir uno debajo del otro
+
+    display: inline -> es para poner uno al lado de otro, ocupa solo su contenido no el 100% del ancho y alto asignado
+
+    display: inline-block, toma todo el ancho y alto que le indicamos
+
+    AHORA SE USA DISPLAY GRID O DISPLAY FLEX*/
+    display: block;
+}
+
+.login input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login input[ type="text" ],
+.login input[ type="password" ] {
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    /*Al dar click en el input se remarcar con una línea, así que al quitar el outline es quitar la línea al clickear*/
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.login input[ type="submit" ] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(8, 66, 132);
+    color: #fff;
+    font: 18px;
+    border-radius: 20px;
+}
+
+.login a {
+    /*Con el text decoration quitamos el hecho de que al dar click se ponga ázul pues la configuración por defecto, así como el delineado con la raya*/
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+    display: block;
+}
+
+/**La pseudo clase ::hover se usa para seleccionar y dar estilo al pasar el mouse por un elemento, en este caso que cambiará de color,
+cuando hacemos referencia a un hover en especifico va con solo :hover, cuando es el global es ::hover*/
+.login a:hover {
+    color: #fff;
+}
