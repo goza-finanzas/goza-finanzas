@@ -2,30 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login Juansubas</title>
+    <title>Inicio Sesión</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="login">
+    <div class="formulario">
         <img class="avatar" src="img/logo.png" alt="logo">
-        <h1>Login Here</h1>
-        <form >
-            <!--USERNAME-->
+        <h2>Bienvenido de nuevo</h2>
+        <p>Inicio sesión con tu cuenta</p>
+        <form method="post">
             <div class="username">
-                <label for="username">Username</label>
-                <input class="form-control" type="text" placeholder="Enter Username">                
+                <label for="username">Nombre de usuario</label>
+                <input class="form-control" type="text" placeholder="Ingrese su Usuario" required>  
             </div>
+
+            <div class="password">
+                <label for="password">Password</label>
+                <input class="form-control type="password" placeholder="Ingrese su contraseña" required>
+            </div>  
+
+            <div class="remember">
+                <a href="#">¿Olvidó su contraseña?</a>
+            </div>
+            <input class="btn btn-outline-secondary" type="submit" value="Iniciar Sesión">
             
-            <!--PASSWORD-->
-            <label for="password">Password</label>
-            <input class="form-control type="password" placeholder="Enter password">
-
-            <input class="btn btn-outline-secondary" type="submit" value="Log In">
-
-            <a href="#">Lost your password</a>
-            <a href="#">Don't have an account</a>
+            <div class="register">
+                ¿No tienes una cuenta?<a href="#"> Registrate</a>
+            </div>
         </form>
     </div>
 </body>
