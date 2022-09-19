@@ -19,22 +19,24 @@
 body {
     display: flex;
     flex-flow: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, var(--color-uno) 0%, var(--color-tres) 100%);
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .formulario {
     display: flex;
     flex-flow: column;
+    padding: 30px;
+    margin-top: auto;
     align-items: center;
     background-color: var(--fondo-caja);
     width: 400px;
     height: 430px;
     border-radius: 10px;
-    padding: 30px;
     box-shadow: 0 0 27px var(--sombra-caja) ;
     
 }
