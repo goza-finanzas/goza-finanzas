@@ -31,14 +31,14 @@ body {
     display: flex;
     flex-flow: column;
     padding: 30px;
-    margin-top: auto;
+    margin: 50px;
     align-items: center;
     background-color: var(--fondo-caja);
     width: 400px;
-    max-height: 90vh;
+    max-height: 100vh;
     border-radius: 10px;
     box-shadow: 0 0 27px var(--sombra-caja) ;
-    
+    overflow: hidden;
 }
 
 .formulario .avatar {
@@ -74,6 +74,14 @@ footer{
     color: #365670;
     border-radius: 23px 23px 0 0;
     font-size: 15px;
+}
+
+footer .footer-name {
+    font-size: 20px;
+    line-height: 1px;
+    text-align: center;
+    padding: 20px 0 0 10px;
+
 }
 
 footer .footer-rights {
