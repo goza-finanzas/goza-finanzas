@@ -35,7 +35,7 @@ body {
     align-items: center;
     background-color: var(--fondo-caja);
     width: 400px;
-    height: 430px;
+    max-height: 90vh;
     border-radius: 10px;
     box-shadow: 0 0 27px var(--sombra-caja) ;
     
@@ -61,5 +61,30 @@ body {
 .formulario a:hover {
     color: var(--color-uno);
 }
+
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end; 
+    width: 100%;
+    margin-top: auto;
+    background-color: white;
+    color: #365670;
+    border-radius: 23px 23px 0 0;
+    font-size: 15px;
+}
+
+footer .footer-rights {
+  line-height: 1px;
+  text-align: center;
+}
+footer .footer-terms {
+  padding-right: 20px;
+  line-height: 1px;
+  text-align: center;
+}
+
 
 
