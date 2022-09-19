@@ -1,15 +1,27 @@
+:root {
+    --fuente: 'Quicksand' ,sans-serif;
+    --color-uno: #0e3b56;
+    --color-dos: #0d627c;
+    --color-tres: #0993ab;
+    --color-cuatro: #05dbe3;
+    --color-cinco: #0ffff8;
+    --fondo-caja: aliceblue;
+    --sombra-caja: rgb(36, 23, 23);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: var(--fuente);
 }
 
 body {
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #0e3b56 0%, #0993ab 100%);
+    background: linear-gradient(135deg, var(--color-uno) 0%, var(--color-tres) 100%);
     background-size: cover;
     height: 100vh;
 }
@@ -17,20 +29,35 @@ body {
 .formulario {
     display: flex;
     flex-flow: column;
-    justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    background-color: var(--fondo-caja);
     width: 400px;
-    height: 400px;
-    border-radius: 10%;
-    box-shadow: 2px 2px 2px black;
-    padding: 5px;
-    margin: auto;
-
+    height: 430px;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 27px var(--sombra-caja) ;
+    
 }
 
-.login .avatar {
+.formulario .avatar {
+    width:  100px;
     height: 100px;
     border-radius: 50%;
     
 }
+
+.formulario, .username, .password{
+    display: flex;
+}
+
+.formulario a {
+    /*Con el text decoration quitamos el hecho de que al dar click se ponga ázul pues la configuración por defecto, así como el delineado con la raya*/
+    text-decoration: none;
+    color: var(--color-tres);
+}
+
+.formulario a:hover {
+    color: var(--color-uno);
+}
+
+
