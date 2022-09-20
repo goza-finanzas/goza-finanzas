@@ -45,8 +45,8 @@ body{
 }
 
 .login .avatar {
-    height: 100px;
-    border-radius: 50%;
+    height: 130px;
+
     
 }
 
@@ -80,3 +80,6 @@ footer{
     margin-top: 7px;
 }
 
+::placeholder{
+    color: aqua;
+}
