@@ -1,0 +1,143 @@
+:root {
+    --fuente: 'Quicksand' ,sans-serif;
+    --color-uno: #0e3b56;
+    --color-dos: #0d627c;
+    --color-tres: #0993ab;
+    --color-cuatro: #05dbe3;
+    --color-cinco: #0ffff8;
+    --fondo-caja: aliceblue;
+    --sombra-caja: rgb(36, 23, 23);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente);
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-uno) 0%, var(--color-tres) 100%);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.formulario {
+    display: flex;
+    flex-flow: column;
+    padding: 30px;
+    margin: 10vh;
+    align-items: center;
+    background-color: var(--fondo-caja);
+    width: 400px;
+    max-height: 100vh;
+    border-radius: 10px;
+    box-shadow: 0 0 27px var(--sombra-caja) ;
+    overflow: hidden;
+}
+
+.formulario .avatar {
+    width:  100px;
+    height: 100px;
+    border-radius: 50%;
+    
+}
+
+.formulario, .username, .password{
+    display: flex;
+}
+
+.formulario a {
+    /*Con el text decoration quitamos el hecho de que al dar click se ponga ázul pues la configuración por defecto, así como el delineado con la raya*/
+    text-decoration: none;
+    color: var(--color-tres);
+}
+
+.formulario a:hover {
+    color: var(--color-uno);
+}
+
+/*ESTILOS DE DASHBOARD*/
+.navbar{
+    width: 100%;
+    border-radius: 0 0 23px 23px;
+}
+
+.contenido {
+    width: 100%;
+    height: 100%;
+    border: black;
+    background-color: red;
+    background-size: cover;
+}
+
+.bi {
+    text-align: left;
+    font-size: 20px;
+    
+}
+
+
+.main-section{
+    margin:0 auto;
+    margin-top:5%;
+}
+.card{
+	opacity: .95;
+}
+.card-body{
+    background-color: #d1d3d6;
+    box-shadow: 0px 0px 3px #848484;
+}
+
+label{
+	font-weight: bold;
+}
+
+.nav-tabs .nav-item a:not(.active){
+	background-color: #d1d3d6;
+}
+
+.nav-tabs{
+	border-bottom:0px;
+}
+
+/*------------*/
+
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end; 
+    width: 100%;
+    margin-top: auto;
+    background-color: white;
+    color: #365670;
+    border-radius: 23px 23px 0 0;
+    font-size: 15px;
+}
+
+footer .footer-name {
+    font-size: 20px;
+    line-height: 1px;
+    text-align: center;
+    padding: 20px 0 0 10px;
+
+}
+
+footer .footer-rights {
+  line-height: 1px;
+  text-align: center;
+}
+footer .footer-terms {
+  padding-right: 20px;
+  line-height: 1px;
+  text-align: center;
+}
+
+
+

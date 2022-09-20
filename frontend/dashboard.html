@@ -1,0 +1,211 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <!--Esto permite codificar asentos y caracteres especiales-->
+    <meta charset="utf-8">
+    <!--Activa responsive de la web-->
+    <meta name="viewport" conten="width=device-width, initial-scale=1.0">
+    <!--Activa compatibilidad con navegadores viejos-->
+    <meta hhtp-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Dashboard - GozaFinanzas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/np    m/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!--JQUERY-->
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script 
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/f8f368abfa.js" crossorigin="anonymous"></script>
+    <!-- DATA TABLE -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">	
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <script type="text/javascript">
+      $(document).ready(function() {
+          //Asegurate que el id que le diste a la tabla sea igual al texto despues del simbolo #
+          $('#userList').DataTable();
+      } );
+    </script>
+  </head>
+  <body>
+    <!--inicio nav / barra de navegación-->
+			<nav class="navbar navbar-expand-lg bg-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">Navbar</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Perfil</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Movimientos</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Consejos Financieros</a>
+							</li>
+							<li class="nav-item">
+								<li class="nav-item">
+								<a class="nav-link active bi bi-box-arrow-right" aria-current="page" href="#">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+      <!--Fin nav / barra de navegación-->
+      <!--Inicio contenido-->
+      <div class="container">
+        <div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
+          <ul class="nav nav-tabs justify-content-end">
+            <li class="nav-item">
+            <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Lista movimientos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="form" aria-selected="true">Crear movimientos</a>				   	
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Movimientos</h4>
+                </div>
+                <div class="card-body">
+                  <!-- Lista de usuarios-->
+                  <div class="table-responsive">
+                    <table id="userList" class="table table-bordered table-hover table-striped">
+                      <thead class="thead-light">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Monto</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Descripción</th>
+                        <th></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Arriendo</td>
+                        <td>19/09/2022</td>
+                        <td>$850.000</td>
+                        <td>Costo fijo</td>
+                        <td>Pago arriendo apto mes abril</td>
+                        <td>
+                          <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>empanadas</td>
+                        <td>19/09/2022</td>
+                        <td>$850.000</td>
+                        <td>Gasto</td>
+                        <td>Pago arriendo apto mes abril</td>
+                        <td>
+                          <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Ropa</td>
+                        <td>19/09/2022</td>
+                        <td>$850.000</td>
+                        <td>Costo variable</td>
+                        <td>Pago arriendo apto mes abril</td>
+                        <td>
+                          <a href="#"><i class="fas fa-edit"></i></a> | <a href="#"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="form-tab">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Crear movimiento</h4>
+                </div>
+                <div class="card-body">
+                  <!-- Formulario para crear movimientos-->
+                  <form class="form" role="form" autocomplete="off">
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label form-control-label">Nombre</label>
+                      <div class="col-lg-9">
+                        <input class="form-control" type="text" >
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label form-control-label">Fecha</label>
+                      <div class="col-lg-9">
+                        <input class="form-control" type="date" >
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label form-control-label">Monto</label>
+                      <div class="col-lg-9">
+                        <input class="form-control" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label form-control-label">Categoria</label>
+                      <div class="col-lg-9">
+                        <input class="form-control" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-lg-3 col-form-label form-control-label">Descripcion</label>
+                      <div class="col-lg-9">
+                        <input class="form-control" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-lg-12 text-center">
+                        <input type="reset" class="btn btn-secondary" value="Cancelar">
+                        <input type="button" class="btn btn-primary"
+                          value="Guardar">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-name">
+          <p>Goza Finanzas</p>
+        </div>
+        <div class="footer-rights">
+              <p>&#169; 2022 Goza Finanzas. Todos los derechos reservados</p>
+          </div>
+          <div class="footer-terms">
+              <p><a href="https://www.google.com">Terminos y Condiciones</a></p>
+          </div>
+      </footer>
+    </body> 
+</html>
