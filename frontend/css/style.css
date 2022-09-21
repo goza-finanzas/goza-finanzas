@@ -136,15 +136,15 @@ label{
     overflow: auto;
 }
 
-.izquierda h2{
+.izquierda h2, .caja-finanzas-texto h2 {
     height: 20vh;
     color: white;
     font-size: 7vh;
     border: 5px solid black;
-    
+    text-align: center;
 }
 
-.izquierda p {
+.izquierda, .descripcion-finanzas {
     font-size: 20px;
     padding: 10px;
     color: white;
@@ -163,14 +163,47 @@ label{
     padding: 10px;
 }
 
-.titulo-principal {
-    color:green;
-    text-align: center;
-}
 
-.descripcion {
+.descripcion, .descripcion-finanzas {
     text-align: justify;
 }
+
+.section-finanzas{
+    display: grid;
+    width: 90%;
+    height: 80vh;
+    margin: 100px;
+    align-items: flex-start;
+    grid-template-columns: 30% 70%;
+    margin: auto;
+    grid-column-gap: 10px;
+}
+
+.caja-finanzas-texto {
+    border: 2px solid black;
+    height: 100%;
+
+}
+
+.videos-finanzas {
+    grid-template-rows: repeat(3, 1fr);
+    text-align: center;
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+}
+
+iframe {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+
 
 footer{
     display: flex;
