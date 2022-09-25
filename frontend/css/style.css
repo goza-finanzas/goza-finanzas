@@ -9,12 +9,70 @@
     --sombra-caja: rgb(36, 23, 23);
 }
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--fuente);
 }
+
+
+/*----------Navbar---------*/
+
+.container-navbar{
+    background:rgba(5,7,12,0.40);
+    width: 100%;
+    height: 100px;
+}
+
+.navbar {
+    width: 80%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-navbar{
+    width: 150px;
+    cursor: pointer;
+    margin-top: -15px;
+}
+
+.navbar ul li {
+    margin-right: 100px;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+}
+
+.navbar ul li::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #266fce; 
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s ease-out;
+}
+
+.navbar ul li:hover::before{
+    width: 100%;
+    
+}
+
+/*----------PANTALLA LOGIN-----------*/
 
 body {
     background: linear-gradient(rgba(5,7,12,0.55), rgba(5,7,12,0.55)), url(../img/background.jpg);
@@ -24,7 +82,7 @@ body {
 
 .main-container {
     width: 100%;
-    height: 94.4vh;
+    height: 89.8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,73 +137,43 @@ h2{
 
 
 
-
-
-/*ESTILOS DEL DASHBOARD*/
-.navbar{
-    width: 100%;
-    border-radius: 0 0 23px 23px;
-}
-
-.contenido {
-    width: 100%;
-    height: 100%;
-    border: black;
-    background-color: red;
-    background-size: cover;
-}
-
-.bi {
-    text-align: left;
-    font-size: 20px;
-    
-}
-
-
-.main-section{
-    margin:0 auto;
-    margin-top:5%;
-}
-.card{
-	opacity: .95;
-}
-.card-body{
-    background-color: #d1d3d6;
-    box-shadow: 0px 0px 3px #848484;
-}
-
-label{
-	font-weight: bold;
-}
-
-.nav-tabs .nav-item a:not(.active){
-	background-color: #d1d3d6;
-}
-
-.nav-tabs{
-	border-bottom:0px;
-}
-
-/*------------*/
-
 /*Inicio Css*/
 
 
 .main-container-inicio{
     width: 100%;
-    height: 6.8vh;
+    margin-top: 2.4%;
+  
+}
+
+.section-index{
+    color: white;
+    background:rgba(5,7,12,0.40);
+    outline: none;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    border-radius: 10px;
+    width: 1700px;
+    height: 688px;
+    margin: auto;
     align-items: center;
 }
 
-footer{
-    height: 45px;
-    width: 100%;
-    background: linear-gradient(rgba(5,7,12,0.55), rgba(5,7,12,0.55));
-    color: white;
+.imagen-inicio{
+    margin-left: 80px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.titulo-inicio{
+    width: 700px;
+    margin-left: 80px;
  }
 
+ .descripcion-gozafinanzas{
+    font-size: 30px; 
+    text-align:center;
+}
 
 
 
@@ -153,7 +181,7 @@ footer{
 
  .main-container-registro {
     width: 100%;
-    height: 94.4vh;
+    height: 89.8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,11 +255,9 @@ footer{
     color: white;
     background:rgba(5,7,12,0.40);
     outline: none;
-
     border-radius: 10px;
     width: 1700px;
     height: 1580px;
-    padding: 5px;
     margin: auto;
 }
 
@@ -278,3 +304,40 @@ footer{
     border-radius: 15px;
     margin-left: 35px;
 }
+
+
+
+/*-----------Crear/ver movimiento----------*/
+
+.main-container-crear{
+    width: 100%;
+    height: 79vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-crearMovimiento{
+    color: white;
+    background:rgba(5,7,12,0.40);
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    width: 1700px;
+    height: 688px;
+    margin: auto;
+    align-items: center;
+}
+
+
+
+/*---------Footer----------*/
+
+footer{
+    margin-top: 50px;
+    height: 45px;
+    width: 100%;
+    background:rgba(5,7,12,0.40);
+    color: white;
+ }

@@ -7,7 +7,7 @@
     <meta name="viewport" conten="width=device-width, initial-scale=1.0">
     <!--Activa compatibilidad con navegadores viejos-->
     <meta hhtp-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Inicio - GozaFinanzas</title>
+    <title>Consejos - GozaFinanzas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -15,29 +15,17 @@
   </head>
   <body>
     <!--inicio nav / barra de navegación-->
-			<nav class="navbar navbar-expand-lg bg-light">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="./inicio.html">GozaFinanzas</a>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button> 
-					<div class="collapse navbar-collapse" id="GozaFinanzas">
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="./perfil.html">Perfiles</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="./movimientos.html">Movimientos</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="./consejos.html">Consejos</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link bi bi-box-arrow-right" href="./login.html"></a>
-							</li>
-						</ul>
-					</div>
-				</div>
+			<nav class="container-navbar">
+				<div class="navbar">
+					<img  src="./img/2.png" class="logo-navbar" alt="logo-navbar">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./crearMovimientos.html">Crear Movimiento</a></li>
+          <li><a href="./verMovimientos.html">Ver Movimientos</a></li>
+          <li><a href="./consejos.html">Consejos</a></li>
+          <li><a class="nav-link bi bi-box-arrow-right" href="./login.html"></a></li>
+        </ul>
+      </div>
 			</nav>
     <main class="main-container-consejos">
         <section class="section-finanzas">
@@ -57,10 +45,9 @@
             <iframe class="video-4" width="710" height="465" src="https://www.youtube.com/embed/DpGHHRMZNpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </section>
-      <!--Fin nav / barra de navegación-->
       <div>
       </div>
-    </main>0
+    </main>
       <footer>
         <h2 style="font-size: 30px" class="smileTask">
           Goza Finanzas
