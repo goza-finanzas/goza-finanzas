@@ -16,14 +16,16 @@ CREATE TABLE movimientos(
     fecha VARCHAR(45) NOT NULL,
     monto DOUBLE NOT NULL,
     categoria VARCHAR(45),
-    descripcion VARCHAR(100) NOT NULL,
-    FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
+    descripcion VARCHAR(100) NOT NULL
 );
 
 ALTER TABLE usuarios
 MODIFY password VARCHAR(255) NOT NULL;
 
 SELECT * FROM usuarios;
+SELECT * FROM movimientos;
+
+SELECT id FROM usuarios WHERE email = "juansubas@gmail.com";
 
 DROP TABLE usuarios;
 
