@@ -1,0 +1,217 @@
+:root {
+    --fuente: 'Quicksand' ,sans-serif;
+    --color-uno: #0e3b56;
+    --color-dos: #0d627c;
+    --color-tres: #0993ab;
+    --color-cuatro: #05dbe3;
+    --color-cinco: #0ffff8;
+    --fondo-caja: aliceblue;
+    --sombra-caja: rgb(36, 23, 23);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente);
+}
+
+
+/*----------Navbar---------*/
+
+.container-navbar{
+    background:rgba(5,7,12,0.40);
+    width: 100%;
+    height: 100px;
+}
+
+.navbar {
+    width: 80%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-navbar{
+    width: 150px;
+    cursor: pointer;
+    margin-top: -15px;
+}
+
+.navbar ul li {
+    margin-right: 100px;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+}
+
+.navbar ul li::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #266fce; 
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s ease-out;
+}
+
+.navbar ul li:hover::before{
+    width: 100%;
+    
+}
+
+/*----------PANTALLA LOGIN-----------*/
+
+body {
+    background: linear-gradient(rgba(5,7,12,0.55), rgba(5,7,12,0.55)), url(../img/background.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    height: 89.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background:rgba(5,7,12,0.40);
+    outline: none;
+
+    border-radius: 10px;
+    width: 400px;
+    height: 450px;
+    padding: 5px;
+    margin: auto;
+}
+
+.login .avatar {
+    height: 130px;
+
+    
+}
+
+
+
+h2{
+    margin-left: 40px;
+    margin-top: 7px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+}
+
+.btn-primary{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.login{
+    color: white;
+}
+
+
+/*Registro*/
+
+.main-container-registro {
+    width: 100%;
+    height: 89.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login-registro{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background:rgba(5,7,12,0.40);
+    outline: none;
+
+    border-radius: 10px;
+    width: 500px;
+    height: 580px;
+    padding: 5px;
+    margin: auto;
+}
+
+.avatar-registro {
+    height: 130px;
+
+    
+}
+
+.form-control{
+    margin-bottom: 10px;
+}
+
+.btn-primary{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.login{
+    color: white;
+}
+
+.registrate{
+    color: white;
+}
+
+.fecha-text{
+    color: white;
+    font-size: 10px;
+}
+
+.tienes-cuenta{
+    color: white;
+}
+
+/*---------Footer----------*/
+
+footer{
+    margin-top: auto;
+    display: grid;
+    height: 100rm;
+    width: 100%;
+    background:rgba(5,7,12,0.40);
+    color: white;
+    text-align: center;
+}
+
+footer h2{
+    display: flex;
+    flex-direction: column;
+}

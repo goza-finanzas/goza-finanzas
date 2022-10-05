@@ -1,0 +1,22 @@
+@import url(diseño.css);
+
+.section-index {
+    margin: auto;
+    padding: 1%;
+    width: 95%;
+    height: 95%;
+    background:rgba(5,7,12,0.40);
+    border-radius: 10px;
+    color: white;
+}
+
+.titulo-inicio {
+    text-align: center;
+}
+
+.imagen-inicio {
+    width: auto;
+    height: 80%;
+    margin: 0 15rem;
+}
+

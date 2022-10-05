@@ -1,0 +1,30 @@
+@import url(diseño.css);
+
+.section-finanzas {
+    margin: auto;
+    padding: 1%;
+    width: 100%;
+    height: 100%;
+    background:rgba(5,7,12,0.40);
+    border-radius: 10px;
+    overflow: auto;
+    color: white;
+}
+
+.titulo-finanzas {
+    text-align: center;
+}
+
+.videos-finanzas {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.video-1, .video-2, .video-3, .video-4 {
+    width: 40vw;
+    height: 60vh;
+    
+}
+

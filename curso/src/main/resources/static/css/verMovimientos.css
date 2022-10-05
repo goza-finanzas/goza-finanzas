@@ -1,0 +1,17 @@
+@import url(diseño.css);
+
+
+.seccion {
+    margin: auto;
+    padding: 1%;
+    width: 100%;
+    height: 100%;
+    background:rgba(5,7,12,0.40);
+    border-radius: 10px;
+    overflow: auto;
+    color: white;
+}
+
+.table, #tbody tr td {
+    color: white;
+}

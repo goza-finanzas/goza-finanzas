@@ -1,0 +1,95 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <!--Esto permite codificar asentos y los caracteres especiales -->
+    <meta charset="utf-8">
+    <!--Activa responsive de la web-->
+    <meta name="viewport" conten="width=device-width, initial-scale=1.0">
+    <!--Activa compatibilidad con navegadores viejos-->
+    <meta hhtp-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Ver movimientos - GozaFinanzas</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/verMovimientos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!--JQUERY-->
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <!--inicio nav / barra de navegación-->
+    <nav class="container-navbar">
+      <div class="navbar">
+        <img  src="./img/2.png" class="logo-navbar" alt="logo-navbar">
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./crearMovimientos.html">Crear Movimiento</a></li>
+        <li><a href="./verMovimientos.html">Ver Movimientos</a></li>
+        <li><a href="./consejos.html">Consejos</a></li>
+        <li><a onclick="salir()" class="nav-link bi bi-box-arrow-right" href="./login.html"></a></li>
+      </ul>
+    </div> 
+    </nav>
+      <!--Fin nav / barra de navegación-->
+      <!--Inicio contenido-->
+
+      <main>
+        <section class="seccion">
+          <h2>Movimientos de las Finanzas</h2>
+          <table id="table" class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Fecha</td>
+                <td>Monto</td>
+                <td>Categoria</td>
+                <td>Descripcion</td>
+                <td>Acciones</td>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+    
+            </tbody>
+          </table>
+        </section>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar Mascota</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ¿Desea eliminar la mascota?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"  onclick="delete_mascota()">Sí, deseo eliminarla</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    
+      </main>
+
+      <footer>
+        <h2 style="font-size: 30px">
+          Goza Finanzas
+          <span style="font-size: 15px"
+            >© 2022 Todos los derechos reservados.</span
+          >
+          <span style="font-size: 17px"
+            >Terminos y condiciones Política de privacidad</span
+          >
+        </h2>
+      </footer>
+      <script src="./js/verMovimientos.js"></script>
+      <script src="./js/salir.js"></script>
+    </body> 
+</html>
